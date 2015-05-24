@@ -415,7 +415,7 @@ static int dataHandler(HttpConnection *http, struct Service *service,
   // Process keypresses, if any. Then send a synchronous reply.
   if (keys) {
     char *keyCodes;
-    check(keyCodes        = malloc(strlen(keys)/2 + 1));
+    check(keyCodes        = malloc(strlen(keys)/2));
     int len               = 0;
     for (const unsigned char *ptr = (const unsigned char *)keys; ;) {
       unsigned c0         = *ptr++;
@@ -428,11 +428,12 @@ static int dataHandler(HttpConnection *http, struct Service *service,
           (c1 > 'F' && c1 < 'a') || c1 > 'f') {
         break;
       }
-      keyCodes[len++]     = 16*((c0 & 0xF) + 9*(c0 > '9')) +
+      char thisKey        = 16*((c0 & 0xF) + 9*(c0 > '9')) +
                                 (c1 & 0xF) + 9*(c1 > '9');
+      printf("%d ", thisKey);
+      keyCodes[len++]     = thisKey;
     }
-    keyCodes[len] = '\0';
-    printf("--\n%s\n", keyCodes);
+    printf("\n");
     if (write(session->pty, keyCodes, len) < 0 && errno == EAGAIN) {
       completePendingRequest(session, "\007", 1, MAX_RESPONSE);
     }
