@@ -30,8 +30,8 @@ Kernel configured for up to 4 processors.
 Processor type: i486 (Intel 80486)
 Processors active: 0 1 2 3
 Primary memory available: 4.00 gigabytes
-Default processor set: 246 tasks, 1004 threads, 4 processors
-Load average: 1.42, Mach factor: 2.59
+Default processor set: 248 tasks, 998 threads, 4 processors
+Load average: 0.91, Mach factor: 3.08
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -799,7 +799,7 @@ configure:10661: checking for gethostbyname_r
 configure:10661: gcc -o conftest -Os   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_gethostbyname_r", referenced from:
-      _main in conftest-fe9f55.o
+      _main in conftest-6ec4db.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10661: $? = 1
@@ -895,7 +895,7 @@ configure:10661: checking for getresuid
 configure:10661: gcc -o conftest -Os   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_getresuid", referenced from:
-      _main in conftest-929f52.o
+      _main in conftest-8628ab.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10661: $? = 1
@@ -979,7 +979,7 @@ configure:10661: checking for getresgid
 configure:10661: gcc -o conftest -Os   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_getresgid", referenced from:
-      _main in conftest-9cbfce.o
+      _main in conftest-ae2832.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10661: $? = 1
@@ -1063,7 +1063,7 @@ configure:10661: checking for setresuid
 configure:10661: gcc -o conftest -Os   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_setresuid", referenced from:
-      _main in conftest-e696a2.o
+      _main in conftest-736d45.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10661: $? = 1
@@ -1147,7 +1147,7 @@ configure:10661: checking for setresgid
 configure:10661: gcc -o conftest -Os   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_setresgid", referenced from:
-      _main in conftest-5cffbc.o
+      _main in conftest-1a1bad.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10661: $? = 1
@@ -1234,7 +1234,7 @@ char buf[10]; ptsname_r(0, buf, sizeof(buf));
 1 warning generated.
 Undefined symbols for architecture x86_64:
   "_ptsname_r", referenced from:
-      _main in conftest-9cb9fb.o
+      _main in conftest-e6de1c.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10689: $? = 1
@@ -1300,7 +1300,7 @@ updwtmp(0, 0);
 1 warning generated.
 Undefined symbols for architecture x86_64:
   "_updwtmp", referenced from:
-      _main in conftest-a9926b.o
+      _main in conftest-d936fe.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10747: $? = 1
@@ -1358,7 +1358,7 @@ updwtmpx(0, 0);
 1 warning generated.
 Undefined symbols for architecture x86_64:
   "_updwtmpx", referenced from:
-      _main in conftest-39d706.o
+      _main in conftest-4bc7c0.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:10765: $? = 1
@@ -1834,6 +1834,7 @@ on Mia.local
 
 config.status:1086: creating Makefile
 config.status:1086: creating config.h
+config.status:1258: config.h is unchanged
 config.status:1306: executing depfiles commands
 config.status:1306: executing libtool commands
 
