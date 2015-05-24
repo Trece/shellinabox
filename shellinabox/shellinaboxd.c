@@ -434,6 +434,7 @@ static int dataHandler(HttpConnection *http, struct Service *service,
       keyCodes[len++]     = thisKey;
     }
     printf("\n");
+    fflush(stdout);
     if (write(session->pty, keyCodes, len) < 0 && errno == EAGAIN) {
       completePendingRequest(session, "\007", 1, MAX_RESPONSE);
     }
