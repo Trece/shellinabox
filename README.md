@@ -1,3 +1,7 @@
+Print all the input characters' key code (as decimal) to `stdout`, every post on different line, space between different keys in same post.
+
+Others Readme
+---
 This is my fork of the ubuntu repo shellinabox, with some fixes.
 
   * Firefox/Chrome crash fixed.
